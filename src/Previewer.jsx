@@ -1,8 +1,8 @@
-import React from 'react';
-import Markdown from 'marked-react';
+import React from 'react'
+import Markdown from 'marked-react'
 
 export function Editor() {
-  return <textarea name="" id="" cols="30" rows="10"></textarea>;
+  return <textarea name="" id="" cols="30" rows="10"></textarea>
 }
 
 export function Previewer() {
@@ -10,5 +10,5 @@ export function Previewer() {
     <div>
       <Markdown>{/* content there */}</Markdown>
     </div>
-  );
+  )
 }
