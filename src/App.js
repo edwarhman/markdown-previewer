@@ -1,10 +1,11 @@
 import React from 'react'
-import Markdown from 'marked-react'
+import { Preview, Editor } from './Previewer'
 
 function App() {
   return (
-    <div className="content">
-      <Markdown>{'# Marked title'}</Markdown>
+    <div>
+      <Editor></Editor>
+      <Preview></Preview>
     </div>
   )
 }
