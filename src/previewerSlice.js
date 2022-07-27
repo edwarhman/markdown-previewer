@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-  raw: '',
+  raw: 'Hello World',
 }
 
 export const previewerSlice = createSlice({
@@ -9,7 +9,7 @@ export const previewerSlice = createSlice({
   initialState,
   reducers: {
     update: (state, action) => {
-      state.raw = action.payload.raw
+      state.raw = action.payload
     },
   },
 })
