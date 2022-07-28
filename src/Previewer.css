@@ -1,42 +1,40 @@
 .appWrapper {
-    /* margin: 3em; */
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  /* margin: 3em; */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .container {
-    border: 2px solid black;
-    margin: 1em;
-    /* flex-grow: .2; */
+  border: 2px solid black;
+  margin: 1em;
 }
 
 .editorContainer {
-    /* max-width: 500px; */
-    height: fit-content;
-    flex-grow: .5;
+  height: fit-content;
+  flex-grow: 1;
 }
 
 .previewContainer {
-    flex-grow: 1;
+  width: 700px;
 }
 
 .header {
-    background-color: brown;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 .5rem;
+  background-color: brown;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0.5rem;
 }
 
 .header > * {
-    margin: 0.2rem;
+  margin: 0.2rem;
 }
 
 textarea.content {
-    width: 94%;
+  width: 94%;
 }
 
 .content {
-    padding: .5em;
+  padding: 0.5em;
 }
