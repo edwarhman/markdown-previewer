@@ -31,6 +31,16 @@
   margin: 0.2rem;
 }
 
+.actionsNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.actionsNav > * {
+    margin: 0 .2rem;
+}
+
 textarea.content {
   width: 94%;
 }
