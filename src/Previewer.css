@@ -32,13 +32,13 @@
 }
 
 .actionsNav {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .actionsNav > * {
-    margin: 0 .2rem;
+  margin: 0 0.2rem;
 }
 
 textarea.content {
