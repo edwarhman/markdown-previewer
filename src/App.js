@@ -5,6 +5,7 @@ import { toogleFullscreen, fullscreenType } from './previewerSlice'
 
 function App() {
   const fullscreen = useSelector((state) => state.previewer.fullscreen)
+  const rawText = useSelector((state) => state.previewer.raw)
   const dispatch = useDispatch()
 
   return (
@@ -17,9 +18,9 @@ function App() {
         <header className="editorHeader header">
           <h2>Editor</h2>
           <nav className="actionsNav">
-            <a href="" onClick={(e) => e.preventDefault()}>
+            <p href="" onClick={() => navigator.clipboard.writeText(rawText)}>
               copy
-            </a>
+            </p>
             <p
               id="editorFullscreen"
               className="fullscreenBtn"
