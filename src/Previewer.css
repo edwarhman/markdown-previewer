@@ -1,20 +1,21 @@
 @media print {
-    body * {
-        visibility: hidden;
-    }
-    #preview, #preview * {
-        visibility: visible;
-    }
-    #preview {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
+  body * {
+    visibility: hidden;
+  }
+  #preview,
+  #preview * {
+    visibility: visible;
+  }
+  #preview {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
 }
 
 .appWrapper {
   margin: auto;
-    max-width: 1300px;
+  max-width: 1300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
