@@ -39,7 +39,7 @@ function App() {
         <header className="previewHeader header">
           <h2>Preview</h2>
           <nav className="actionsNav">
-            <a href="">print</a>
+            <p onClick={() => window.print()}>print</p>
             <p
               id="previewFullscreen"
               className="fullscreenBtn"

@@ -1,12 +1,27 @@
+@media print {
+    body * {
+        visibility: hidden;
+    }
+    #preview, #preview * {
+        visibility: visible;
+    }
+    #preview {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+}
+
 .appWrapper {
-  /* margin: 3em; */
+  margin: auto;
+    max-width: 1300px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 
 .container {
-  border: 2px solid black;
+  border: 3px solid black;
   margin: 1em;
 }
 
@@ -20,8 +35,8 @@
 }
 
 .disabled {
-    position: absolute;
-    right: 100%;
+  position: absolute;
+  right: 100%;
 }
 
 .header {
