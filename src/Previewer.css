@@ -19,6 +19,11 @@
   width: 700px;
 }
 
+.disabled {
+    position: absolute;
+    right: 100%;
+}
+
 .header {
   background-color: brown;
   display: flex;
