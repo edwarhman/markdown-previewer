@@ -1,16 +1,13 @@
 import React from 'react'
 import { Preview, Editor } from './Previewer'
+import { useDispatch } from 'react-redux'
+import { toogleFullscreen, fullscreenType } from './previewerSlice'
 
 function App() {
-  function fullscreen(event, container) {
-    const elementName = event.target.id.match(/^[A-Z]*/)
-    console.log(elementName)
-    const hiddenElement = container.children.filter((el) => el.className)
-    console.log(hiddenElement)
-  }
+    const dispatch = useDispatch()
 
   return (
-    <div className="appWrapper">
+    <div className="appWrapper" id='wrapper'>
       <div className="editorContainer container">
         <header className="editorHeader header">
           <h2>Editor</h2>
@@ -18,7 +15,7 @@ function App() {
             <a href="" onClick={(e) => e.preventDefault()}>
               copy
             </a>
-            <p id='editorFullscreen' className='fullscreenBtn'>fullscreen</p>
+              <p id='editorFullscreen' className='fullscreenBtn' onClick={()=> dispatch(toogleFullscreen(fullscreenType.EDITOR))}>fullscreen</p>
           </nav>
         </header>
         <Editor></Editor>
@@ -28,7 +25,7 @@ function App() {
           <h2>Preview</h2>
           <nav className="actionsNav">
             <a href="">print</a>
-            <p id='previewFullscreen' className='fullscreenBtn'>fullscreen</p>
+            <p id='previewFullscreen' className='fullscreenBtn' onClick={()=> dispatch(toogleFullscreen(fullscreenType.PREVIEW))}>fullscreen</p>
           </nav>
         </header>
         <Preview></Preview>
