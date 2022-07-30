@@ -13,6 +13,11 @@
   }
 }
 
+#root {
+  min-height: 100vh;
+  background-color: beige;
+}
+
 .appWrapper {
   margin: auto;
   max-width: 1300px;
@@ -24,6 +29,7 @@
 .container {
   border: 3px solid black;
   margin: 1em;
+  background-color: white;
 }
 
 .editorContainer {
@@ -42,10 +48,11 @@
 
 .header {
   background-color: brown;
+  color: white;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.5rem;
+  padding: 0 0.2rem;
 }
 
 .header > * {
@@ -63,9 +70,36 @@
 }
 
 textarea.content {
-  width: 94%;
+  width: 97%;
 }
 
 .content {
   padding: 0.5em;
+}
+
+.icon {
+  width: 1.5em;
+  height: 1.5em;
+  margin: 0 0.3em;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-position: center;
+  border-radius: 50%;
+  background-color: white;
+  cursor: pointer;
+}
+.icon:hover {
+  /*background-color: #5ad5d5ff;*/
+  background-color: beige;
+}
+#printIcon {
+  background-image: url('icons/print-icon.png');
+}
+#copyIcon {
+  background-image: url('icons/copy-icon.png');
+  background-size: 65%;
+}
+.fullscreenBtn {
+  background-image: url('icons/fullscreen-icon.png');
+  background-size: 60%;
 }
