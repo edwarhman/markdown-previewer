@@ -46,6 +46,16 @@
   right: 100%;
 }
 
+.focused {
+    flex-grow: 1;
+    width: initial;
+    max-width: 850px;
+}
+
+.focused textarea {
+    overflow-y: visible;
+}
+
 .header {
   background-color: brown;
   color: white;

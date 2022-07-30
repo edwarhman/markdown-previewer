@@ -13,7 +13,7 @@ function App() {
       <div
         className={`editorContainer container ${
           fullscreen === fullscreenType.PREVIEW ? ' disabled' : ''
-        }`}
+        } ${fullscreen === fullscreenType.EDITOR ? 'focused' : ''}`}
       >
         <header className="editorHeader header">
           <h2>Editor</h2>
@@ -23,6 +23,7 @@ function App() {
               className="icon"
               href=""
               onClick={() => navigator.clipboard.writeText(rawText)}
+              placeholder="copy to clipboard"
             ></p>
             <p
               id="editorFullscreen"
@@ -36,7 +37,7 @@ function App() {
       <div
         className={`previewContainer container ${
           fullscreen === fullscreenType.EDITOR ? ' disabled' : ''
-        }`}
+        } ${fullscreen === fullscreenType.PREVIEW ? 'focused' : ''}`}
       >
         <header className="previewHeader header">
           <h2>Preview</h2>
