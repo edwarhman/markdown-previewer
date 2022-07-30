@@ -23,16 +23,14 @@ That is all for now. Happy coding!`
   }, [])
 
   return (
-    <div>
-      <textarea
-        className="content"
-        onChange={(raw) => dispatch(update(raw.target.value))}
-        name=""
-        id="editor"
-        rows="10"
-        value={rawText}
-      ></textarea>
-    </div>
+    <textarea
+      className="content"
+      onChange={(raw) => dispatch(update(raw.target.value))}
+      name=""
+      id="editor"
+      rows="10"
+      value={rawText}
+    ></textarea>
   )
 }
 

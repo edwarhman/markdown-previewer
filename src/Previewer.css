@@ -47,13 +47,13 @@
 }
 
 .focused {
-    flex-grow: 1;
-    width: initial;
-    max-width: 850px;
+  flex-grow: 1;
+  width: initial;
+  max-width: 850px;
 }
 
 .focused textarea {
-    overflow-y: visible;
+  min-height: 90vh;
 }
 
 .header {
@@ -80,7 +80,9 @@
 }
 
 textarea.content {
-  width: 97%;
+  width: 100%;
+  box-sizing: border-box;
+  margin: auto;
 }
 
 .content {
