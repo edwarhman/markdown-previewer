@@ -1,11 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit'
 
+// fullscreen state enum
 export const fullscreenType = {
   OFF: 'off',
   EDITOR: 'editor',
   PREVIEW: 'preview',
 }
 
+// initial state
 const initialState = {
   raw: 'Hello World',
   fullscreen: false,
@@ -29,5 +31,4 @@ export const previewerSlice = createSlice({
 })
 
 export const { update, toogleFullscreen } = previewerSlice.actions
-
 export default previewerSlice.reducer

@@ -18,18 +18,20 @@ function App() {
         <header className="editorHeader header">
           <h2>Editor</h2>
           <nav className="actionsNav">
-            <p
+            {/* Copy button */}
+            <div
               id="copyIcon"
               className="icon"
               href=""
               onClick={() => navigator.clipboard.writeText(rawText)}
               placeholder="copy to clipboard"
-            ></p>
-            <p
+            ></div>
+            {/* Fullscreen button */}
+            <div
               id="editorFullscreen"
               className="fullscreenBtn icon "
               onClick={() => dispatch(toogleFullscreen(fullscreenType.EDITOR))}
-            ></p>
+            ></div>
           </nav>
         </header>
         <Editor></Editor>
@@ -42,16 +44,18 @@ function App() {
         <header className="previewHeader header">
           <h2>Preview</h2>
           <nav className="actionsNav">
+            {/* Print button */}
             <div
               id="printIcon"
               className="icon"
               onClick={() => window.print()}
             ></div>
-            <p
+            {/* Fullscreen button */}
+            <div
               id="previewFullscreen"
               className="fullscreenBtn icon "
               onClick={() => dispatch(toogleFullscreen(fullscreenType.PREVIEW))}
-            ></p>
+            ></div>
           </nav>
         </header>
         <Preview></Preview>

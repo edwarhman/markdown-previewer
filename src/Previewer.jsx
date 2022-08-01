@@ -8,6 +8,7 @@ export function Editor() {
   let rawText = useSelector((state) => state.previewer.raw)
   const dispatch = useDispatch()
 
+  //set initial state
   useEffect(() => {
     const initialState = `# Markdown Previewer
 You can see your **markdown** documents an make modifications to them.
@@ -40,9 +41,8 @@ That is all for now. Happy coding! \`Console.log("Bye World")\`
 
 ![markdown logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/640px-Markdown-mark.svg.png)
 `
-
     dispatch(update(initialState))
-  }, [])
+  }, []) // use an empty array to dispatch only on first load :)
 
   return (
     <textarea
@@ -57,6 +57,7 @@ That is all for now. Happy coding! \`Console.log("Bye World")\`
 }
 
 export function Preview() {
+  //get raw text from redux state
   const rawText = useSelector((state) => state.previewer.raw)
   return (
     <div id="preview" className="content">
