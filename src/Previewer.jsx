@@ -61,7 +61,9 @@ export function Preview() {
   const rawText = useSelector((state) => state.previewer.raw)
   return (
     <div id="preview" className="content">
-      <Markdown>{rawText}</Markdown>
+      <Markdown breaks gfm>
+        {rawText}
+      </Markdown>
     </div>
   )
 }
