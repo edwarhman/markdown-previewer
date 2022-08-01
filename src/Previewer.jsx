@@ -10,15 +10,37 @@ export function Editor() {
 
   useEffect(() => {
     const initialState = `# Markdown Previewer
-You can see your md documents an make modifications
+You can see your **markdown** documents an make modifications to them.
    
-## things to do
-- add copy  button
-- add print button
-- add fullscreen buttons
-- fix dynacmic width of sections
-  
-That is all for now. Happy coding!`
+## What can you do?
+
+- Write books, documentation. summaries, etc.
+- Organize your goals and task to do.
+- Make code examples
+
+## Features
+
+- Organize your text with hierarchy heading.
+- emphatize your text using italic and bold text.
+- add blockquotes to your text.
+- use ordered and unordered list in your text.
+- put syntax highlighted code in your text.
+- reference links and images in your code.
+
+For more information see de [documentation]("https://www.markdownguide.org/").
+
+> Do not reinvent the wheel
+
+\`\`\`[javascript]
+    function greeting() {
+        console.log('Hello World')
+    }
+\`\`\`
+That is all for now. Happy coding! \`Console.log("Bye World")\`
+
+![markdown logo](https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Markdown-mark.svg/640px-Markdown-mark.svg.png)
+`
+
     dispatch(update(initialState))
   }, [])
 
