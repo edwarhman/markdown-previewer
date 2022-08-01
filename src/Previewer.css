@@ -89,6 +89,10 @@ textarea.content {
   padding: 0.5em;
 }
 
+#preview img {
+    width: 100%;
+}
+
 .icon {
   width: 1.5em;
   height: 1.5em;
