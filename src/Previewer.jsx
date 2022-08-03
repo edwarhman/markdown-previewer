@@ -3,6 +3,14 @@ import Markdown from 'marked-react'
 import { useEffect } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { update } from './previewerSlice'
+// import Lowlight from 'react-lowlight'
+// import 'react-lowlight/common'
+
+// export const renderer = {
+//   code(snippet, lang) {
+//     return <Lowlight key={this.elementId} language={lang} value={snippet} />
+//   },
+// }
 
 export function Editor() {
   let rawText = useSelector((state) => state.previewer.raw)
@@ -61,7 +69,7 @@ export function Preview() {
   const rawText = useSelector((state) => state.previewer.raw)
   return (
     <div id="preview" className="content">
-      <Markdown breaks gfm>
+      <Markdown breaks gfm /* renderer={renderer} */>
         {rawText}
       </Markdown>
     </div>
